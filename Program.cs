@@ -255,3 +255,6 @@ List<Tuple<string, int>> lcoppie = new List<Tuple<string, int>>() {
         new Tuple<string, int>("sette", 71),
         new Tuple<string, int>("diciannove", 191) };
 
+double microseconds = DateTime.Now.Ticks / (TimeSpan.TicksPerMillisecond / 1000.0);
+Console.WriteLine("microseconds: {0}", microseconds);
+
