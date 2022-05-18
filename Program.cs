@@ -255,6 +255,38 @@ List<Tuple<string, int>> lcoppie = new List<Tuple<string, int>>() {
         new Tuple<string, int>("sette", 71),
         new Tuple<string, int>("diciannove", 191) };
 
-double microseconds = DateTime.Now.Ticks / (TimeSpan.TicksPerMillisecond / 1000.0);
-Console.WriteLine("microseconds: {0}", microseconds);
+//double microseconds = DateTime.Now.Ticks / (TimeSpan.TicksPerMillisecond / 1000.0);
+//Console.WriteLine("microseconds: {0}", microseconds);
 
+Console.WriteLine("\n\n\n\n\nLCOPPIE");
+lcoppie.Sort();
+lcoppie.ForEach(x => Console.WriteLine(x));
+
+Console.WriteLine(String.Join("\t", lcoppie));
+
+
+//Ok, allora ordiniamo per il secondo campo della tutpla (il numero intero)
+lcoppie.Sort((t1, t2) => t1.Item2.CompareTo(t2.Item2));
+Console.WriteLine(String.Join("\t", lcoppie));
+
+lcoppie.Sort();
+lcoppie.Sort((t1, t2) => t1.Item2-t2.Item2);
+Console.WriteLine(String.Join("\t", lcoppie));
+
+List<Tuple<int, int, int>> lterne = new List<Tuple<int, int, int>>()
+{
+    new Tuple<int, int, int>(1, 2, 3),
+    new Tuple<int, int, int>(5, 5, 2),
+    new Tuple<int, int, int>(2, 4, 11),
+    new Tuple<int, int, int>(12, 15, 21),
+    new Tuple<int, int, int>(55, 45, 32),
+    new Tuple<int, int, int>(1, 2, 4),
+    new Tuple<int, int, int>(1, 3, 0),
+    new Tuple<int, int, int>(5, 5, 1)
+};
+
+lterne.Sort();
+Console.WriteLine(String.Join("\t", lterne));
+
+//double microseconds = DateTime.Now.Ticks / (TimeSpan.TicksPerMillisecond / 1000.0);
+//Console.WriteLine("microseconds: {0}", microseconds);
