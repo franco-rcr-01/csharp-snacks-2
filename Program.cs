@@ -288,5 +288,6 @@ List<Tuple<int, int, int>> lterne = new List<Tuple<int, int, int>>()
 lterne.Sort();
 Console.WriteLine(String.Join("\t", lterne));
 
-//double microseconds = DateTime.Now.Ticks / (TimeSpan.TicksPerMillisecond / 1000.0);
-//Console.WriteLine("microseconds: {0}", microseconds);
+//Se volete verificare la velocità di una parte del codice
+double microseconds = DateTime.Now.Ticks / (TimeSpan.TicksPerMillisecond / 1000.0);
+Console.WriteLine("microseconds: {0}", microseconds);
